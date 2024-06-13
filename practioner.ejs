@@ -1,0 +1,268 @@
+<html>
+<head>
+<title>Health Score</title>
+<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+<link rel='stylesheet' type='text/css' href='plugins/cubeportfolio/css/cubeportfolio.min.css'>
+<link href='css/nivo-lightbox.css' rel='stylesheet' />
+<link href='css/nivo-lightbox-theme/default/default.css' rel='stylesheet' type='text/css' />
+<link href='css/owl.carousel.css' rel='stylesheet' media='screen' />
+<link href='css/owl.theme.css' rel='stylesheet' media='screen' />
+<link href='css/animate.css' rel='stylesheet' />
+<link href='css/style.css' rel='stylesheet'>
+<link id='bodybg' href='bodybg/bg1.css' rel='stylesheet' type='text/css' />
+<link id='t-colors' href='color/default.css' rel='stylesheet'>
+<script src='js/register.js'></script>
+</head>
+<body id='page-top' data-spy='scroll' data-target='.navbar-custom' onLoad="onCountry()">
+<div id='wrapper'>
+<nav class='navbar navbar-custom navbar-fixed-top' role='navigation'>
+<div class='top-area'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-6 col-md-6'>
+<p class='bold text-left'>
+  <script>
+    document.write(new Date());
+</script>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class='container navigation'>
+  <div class='navbar-header page-scroll'>
+  <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-main-collapse'>
+  <i class='fa fa-bars'></i>
+  </button>
+  <a class='navbar-brand' href='/index'>
+  <h3 class='h-ultra'>HEALTH SCORE DIETETICS</h3></a></div>
+  <div class='collapse navbar-collapse navbar-right navbar-main-collapse'>
+  <ul class='nav navbar-nav'>
+  <li ><a href="/index">HOME</a></li>
+  <li class='active'><a href='/practioner'> PRACTIONER SIGNUP</a></li>
+  <li><a href='/patientsignup'>PATIENT SIGNUP</a></li>
+  <li><a href='/forgotpassword'>FORGOT PASSWORD</a></li></ul></div></div></nav>
+<section id='intro' class='intro'>
+<div class='intro-content'>
+<div class='container'>
+  <% if(locals.message){%>
+    <div class='row'>
+        <div class="col-lg-12">
+            
+                <div class="alert alert-info alert-dismissible fade in" role="alert" style="text-align: center;">
+                <strong> <%=message%> </strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      
+                    </div>
+            </div>
+    </div>
+    <%}%>
+<div class='row'>
+<div class='col-lg-6'>
+<div class='form-wrapper'>
+<div class='wow fadeInRight' data-wow-duration='2s' data-wow-delay='0.2s'>
+
+<div class='panel panel-skin'>
+<div class='panel-heading'>
+<h3 style="color: white;" class='panel-title'><span class='fa fa-pencil-square-o'></span>Health Practitioner SignUp</h3>
+</div>
+<div class='panel-body'>
+<form role='form' class='lead' name="register" action='/inserthealthpractitioner' method='post'>
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='text' name='user_name' id='user_name' placeholder='Enter UserName' class='form-control input-md' required>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='text' name='first_name' id='first_name' placeholder='Enter FirstName' class='form-control input-md' required>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='text' name='last_name' id='last_name' placeholder='Enter LastName' class='form-control input-md' required>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='password' name='user_pwd' id='user_pwd' placeholder='Enter Password' class='form-control input-md' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+</div>
+</div>
+
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='number' name='user_mobile' id='user_mobile' placeholder='Enter Mobile Number' class='form-control input-md' required>
+</div>
+</div>
+
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='email' name='user_email' id='user_email' placeholder='Enter Email Id' class='form-control input-md' required>
+</div>
+</div>
+
+</div>
+
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='radio' name='user_gender' value='Male' required>  Male <input type='radio' name='user_gender' value='Female' required>  Female
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>				
+
+</div>
+</div>
+
+
+
+</div>
+<div class='col-lg-6'>
+<div class='form-wrapper'>
+<div class='wow fadeInRight' data-wow-duration='2s' data-wow-delay='0.2s'>
+
+<div class='panel panel-skin'>
+<div class='panel-heading'>
+<h3 class='panel-title' style="color: white;"><span class='fa fa-pencil-square-o'></span>Personal Details</h3>
+</div>
+<div class='panel-body'>
+
+<div class='row'>
+<div class='col-xs-4 col-sm-4 col-md-4'>
+<div class='form-group'>
+<select name='user_country' id='user_country' class='form-control input-md' required onChange='onPickCountry();'>
+<option value='0'>Select Country
+</select>
+</div></div>
+<div class='col-xs-4 col-sm-4 col-md-4'>
+<div class='form-group'>
+<select name='user_state' id='user_state' class='form-control input-md' required disabled onChange='onPickState();'>
+<option value='0'>Select State
+</select>
+</div>
+</div>
+<div class='col-xs-4 col-sm-4 col-md-4'>
+<div class='form-group'>
+<select name='user_city' id='user_city' class='form-control input-md' required >
+<option value='0'>Select City
+</select>
+</div>
+</div>
+</div>
+<div style="color: black;"  class='row'><div class='col-xs-8 col-sm-8 col-md-8'><div class='form-group'>
+<input type='date' name='appdate' id='appdate' class='form-control input-md' required></select>
+</div>
+
+
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<textarea name='user_address' rows=3 cols=50 placeholder='Enter Address' class='form-control input-md' required></textarea>
+</div>
+</div>
+
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<select name='specialization' class='form-control input-md' required><option value=0>-Select Specialization-</option>
+<option value='Cardiologist'>Cardiologist</option>
+<option value='Psychiatrist'>Psychiatrist</option>
+<option value='Neurologist'>Neurologist</option>
+</select>
+</div>
+</div>
+
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='file' name='user_file' class='form-control input-md' accept=".png, .jpg" required>
+<button type="submit">Upload Images</button>
+</div>
+</div>
+
+</div>
+
+<div class='row'>
+<div class='col-xs-8 col-sm-8 col-md-8'>
+<div class='form-group'>
+<input type='checkbox' name='user_toc' value='toc' required>  Accept the terms and conditions
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+</div>				
+
+</div>
+</div>
+</div>					
+</div>
+
+<input type='submit' value='SignUp' class='btn btn-skin btn-block btn-lg'>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+</div>
+<a href='#' class='scrollup'><i class='fa fa-angle-up active'></i></a>
+
+
+<script src='js/jquery.min.js'></script>	 
+<script src='js/bootstrap.min.js'></script>
+<script src='js/jquery.easing.min.js'></script>
+<script src='js/wow.min.js'></script>
+<script src='js/jquery.scrollTo.js'></script>
+<script src='js/jquery.appear.js'></script>
+<script src='js/stellar.js'></script>
+<script src='plugins/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+<script src='js/owl.carousel.min.js'></script>
+<script src='js/nivo-lightbox.min.js'></script>
+<script src='js/custom.js'></script>
+
+
+</body>
+
+</html>
